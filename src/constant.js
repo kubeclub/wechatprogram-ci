@@ -10,26 +10,30 @@ module.exports = {
   // privateKeyPath
   privateKeyPath: process.env.privateKeyPath || '',
 
-
   // basePath
   basePath: process.cwd() || process.env.pwd || '',
 
   // 小程序类型， 有【miniProgram, miniProgramPlugin, miniGame, miniGamePlugin】四种类型
-  type: 'miniProgram', 
-
-  // ignores
-  ignores: ['node_modules/**/*'],
+  type: process.env.type || 'miniProgram', 
 
   // 二维码地址
-  qrcodePath: '',
+  qrcodePath: process.env.qrcodePath || '',
 
   // 二维码类型，支持image或者base64格式
   qrcodeFormat: process.env.qrcodeFormat || 'image',
 
-  // manifest路径
   // 描述
   desc: process.env.dest || '',
 
+  // 名称
+  name: process.env.name || '',
+
+  // 源manifest
+  sourceManifest: process.env.sourceManifest || '',
+
+  // 目标manifest
+  destManifest: process.env.destManifest || '',
+  
   // 是否压缩
   minify: true,
 
@@ -42,12 +46,6 @@ module.exports = {
   // 版本
   version: '',
 
-  // 名称
-  name: process.env.name || '',
-
-  // 源manifest
-  sourceManifest: process.env.sourceManifest || '',
-
-  // 目标manifest
-  destManifest: process.env.destManifest || '',
+  // ignores
+  ignores: ['node_modules/**/*'],
 }

@@ -1,5 +1,5 @@
 {
-  "name": "wechatprogram-ci",
+  "name": "@joymo/wechatprogram-ci",
   "version": "1.0.0",
   "description": "微信小程序自动化构建脚本",
   "type": "commonjs",

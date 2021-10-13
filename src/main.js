@@ -26,7 +26,7 @@ class WechatCI {
 
   // 生成预览版
   preview() {
-    if (this.validateOptions()) {
+    if (!this.validateOptions()) {
       return;
     }
 
@@ -46,20 +46,20 @@ class WechatCI {
           minify: this.options.minify,
         },
         qrcodeFormat: this.options.qrcodeFormat,
-        qrcodeOutputDest: this.options.qrcodeOutputDest,
+        qrcodeOutputDest: this.options.qrcodePath,
       }
 
       if (this.options.debugger) {
         options.onProgressUpdate = console.log;
       }
-
+      console.log(this.options, 'preview options');
       await ci.preview(options);
     })()
   }
 
   // 上传
   upload() {
-    if (this.validateOptions()) {
+    if (!this.validateOptions()) {
       return;
     }
 
@@ -122,12 +122,12 @@ class WechatCI {
     
 
     // 检测路径是否存在
-    if (fs.existsSync(this.options.projectPath)) {
+    if (!fs.existsSync(this.options.projectPath)) {
       console.error("projectPath 路径未找到")
       return false;
     }
 
-    if (fs.existsSync(this.options.privateKeyPath)) {
+    if (!fs.existsSync(this.options.privateKeyPath)) {
       console.error("privateKeyPath 路径未找到")
       return false;
     }
