@@ -1,6 +1,6 @@
 const process = require('process');
 
-module.exports={
+module.exports = {
   // appid
   appid: process.env.appId || '',
 
