@@ -52,7 +52,6 @@ class WechatCI {
       if (this.options.debugger) {
         options.onProgressUpdate = console.log;
       }
-      console.log(this.options, 'preview options');
       await ci.preview(options);
     })()
   }
