@@ -18,14 +18,12 @@
   "author": "ruichao.lin@abite.com",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-env": "^7.8.0",
     "colors": "^1.4.0",
     "cross-env": "^7.0.3",
     "miniprogram-ci": "^1.6.1"
   },
   "devDependencies": {
-    "jest": "^27.2.5",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "babel-jest": "^27.2.5"
+    "jest": "^26.0.0"
   }
 }
