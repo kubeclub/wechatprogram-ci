@@ -1,6 +1,6 @@
 {
   "name": "@joymo/wechatprogram-ci",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "微信小程序自动化构建脚本",
   "type": "commonjs",
   "main": "src/main.js",
@@ -18,12 +18,8 @@
   "author": "ruichao.lin@abite.com",
   "license": "MIT",
   "dependencies": {
-    "@babel/preset-env": "^7.8.0",
     "colors": "^1.4.0",
     "cross-env": "^7.0.3",
     "miniprogram-ci": "^1.6.1"
-  },
-  "devDependencies": {
-    "jest": "^26.0.0"
   }
 }
