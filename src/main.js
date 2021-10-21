@@ -73,6 +73,7 @@ class WechatCI {
 
       let options = {
         project,
+        robot: this.options.robot,
         desc: this.options.desc,
         setting: {
           minify: this.options.minify,

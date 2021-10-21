@@ -23,7 +23,7 @@ module.exports = {
   qrcodeFormat: process.env.qrcodeFormat || 'image',
 
   // 描述
-  desc: process.env.dest || '',
+  desc: process.env.desc || '',
 
   // 名称
   name: process.env.name || '',
@@ -45,6 +45,9 @@ module.exports = {
 
   // 版本
   version: '',
+  
+  // 机器人id
+  robot: process.env.robotId || 15,
 
   // ignores
   ignores: ['node_modules/**/*'],
